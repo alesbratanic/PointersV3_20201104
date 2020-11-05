@@ -4,24 +4,27 @@
 #include <stdio.h>
 #include <string.h>
 
+void printAllCharacters(const char* Cx) {
+    //Cx[0] = 'A'; we get an error must use modifiable variable
+    int i = 0;
+    while (Cx[i] != '\0') {
+        printf("%c", Cx[i]);
+        i++;
+    }
+    printf("\n");
+}
+//same as
+//void printAllCharacters(char* Cx) {
+//    while (*Cx != '\0') {
+//        printf("%c", *Cx);
+//        Cx++;
+//    }
+//    printf("\n");
+//}
 int main()
 {
-    //pointers and arrays are different types that are used in simmilar manner.
-    char C1[6] = "Hello";
-    char* C2 = C1;
-    printf("%s\n", C2); //Hello
-    printf("%c \n", C2[1]); //e
-    C2[0] = 'M';
-    printf("%s\n", C2); //Mello
-    //C2[i] is equal to *(C2+i)
-    //C1[i] is equal to *(C1+i) //similarity
-
-    //differences
-    //C1 = C2; wrong use pointers and arrays are different types that are used in simmilar manner.
-    //C1 = C1 + 1; wrong use
-    //We need to understand when we have an array and when we have a pointer and what we can do with each one
-    C2++; //is ok because we are using pointer, we increment the address of pointer by 1 byte, pointer show to the next byte in the C1 variable.
-    printf("%c \n", C2[1]); //l
+    char C1[20] = "Hello";
+    printAllCharacters(C1);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
