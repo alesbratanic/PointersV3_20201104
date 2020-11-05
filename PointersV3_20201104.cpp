@@ -6,15 +6,18 @@
 
 int main()
 {
-    char Cp[20]="JOHN";
-    /*Cp[0] = 'J';
+    char Cp[5] = { 'J','O','H','N','\0' }; //comma separated list we need to do null termination explicitely
+    //char Cp[] = "JOHN";   null termination is implicit
+    //char Cp[20]="JOHN";
+    /*x+char Cp[20];
+    Cp[0] = 'J';
     Cp[1] = 'O';
     Cp[2] = 'H';
     Cp[3] = 'N';
     Cp[4] = '\0';*/
     printf("Text is %s\n", Cp); //Text is JOHN
-    int len = strlen(Cp);
-    printf("Length of the string is %d.\n", len); //Length of the string is 4.
+    int len1 = strlen(Cp);
+    printf("Length of the string is %d.\n", len1); //Length of the string is 4.
     //The function sees the \0 null character and returns the length of the string
 
 }
