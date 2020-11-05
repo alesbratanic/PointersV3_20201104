@@ -6,20 +6,22 @@
 
 int main()
 {
-    char Cp[5] = { 'J','O','H','N','\0' }; //comma separated list we need to do null termination explicitely
-    //char Cp[] = "JOHN";   null termination is implicit
-    //char Cp[20]="JOHN";
-    /*x+char Cp[20];
-    Cp[0] = 'J';
-    Cp[1] = 'O';
-    Cp[2] = 'H';
-    Cp[3] = 'N';
-    Cp[4] = '\0';*/
-    printf("Text is %s\n", Cp); //Text is JOHN
-    int len1 = strlen(Cp);
-    printf("Length of the string is %d.\n", len1); //Length of the string is 4.
-    //The function sees the \0 null character and returns the length of the string
+    //pointers and arrays are different types that are used in simmilar manner.
+    char C1[6] = "Hello";
+    char* C2 = C1;
+    printf("%s\n", C2); //Hello
+    printf("%c \n", C2[1]); //e
+    C2[0] = 'M';
+    printf("%s\n", C2); //Mello
+    //C2[i] is equal to *(C2+i)
+    //C1[i] is equal to *(C1+i) //similarity
 
+    //differences
+    //C1 = C2; wrong use pointers and arrays are different types that are used in simmilar manner.
+    //C1 = C1 + 1; wrong use
+    //We need to understand when we have an array and when we have a pointer and what we can do with each one
+    C2++; //is ok because we are using pointer, we increment the address of pointer by 1 byte, pointer show to the next byte in the C1 variable.
+    printf("%c \n", C2[1]); //l
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
