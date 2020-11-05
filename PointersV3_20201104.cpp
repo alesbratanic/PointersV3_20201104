@@ -1,11 +1,22 @@
 // PointersV3_20201104.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    char Cp[20]="JOHN";
+    /*Cp[0] = 'J';
+    Cp[1] = 'O';
+    Cp[2] = 'H';
+    Cp[3] = 'N';
+    Cp[4] = '\0';*/
+    printf("Text is %s\n", Cp); //Text is JOHN
+    int len = strlen(Cp);
+    printf("Length of the string is %d.\n", len); //Length of the string is 4.
+    //The function sees the \0 null character and returns the length of the string
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
